@@ -11,11 +11,13 @@ import fr.afcepf.atod.wine.entity.Order;
 import fr.afcepf.atod.wine.entity.OrderDetail;
 import fr.afcepf.atod.wine.entity.Product;
 import java.util.HashSet;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author ronan
  */
+@Service
 public class BuOrder implements IBuOrder {
     /**
      * quantity initial = 1
