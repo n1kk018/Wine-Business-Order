@@ -23,4 +23,6 @@ public interface IBuOrder {
      */
     Order addItemCart(Order order, Product product) throws WineException;
     
+    Order addNewOrder(Order order) throws WineException; 
+    
 }
