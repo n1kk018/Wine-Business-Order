@@ -6,6 +6,7 @@
 package fr.afcepf.atod.wine.business.order.api;
 
 import fr.afcepf.atod.vin.data.exception.WineException;
+import fr.afcepf.atod.wine.entity.Customer;
 import fr.afcepf.atod.wine.entity.Order;
 import fr.afcepf.atod.wine.entity.Product;
 
@@ -24,5 +25,7 @@ public interface IBuOrder {
     Order addItemCart(Order order, Product product) throws WineException;
     
     Order addNewOrder(Order order) throws WineException; 
+    
+    Order getLastOrderByCustomer(Customer customer); 
     
 }
