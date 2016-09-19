@@ -41,7 +41,7 @@ public class BuOrder implements IBuOrder {
      */    
     @Override
     public Order addItemCart(Order order, Product product) throws WineException {
-        boolean itemFoundCart  = false;
+        boolean itemFoundInCart  = false;
        if (order.getOrdersDetail()== null) {
            order.setOrdersDetail(new HashSet<OrderDetail>());
            insertNewOrderDetail(order, product);
@@ -49,11 +49,11 @@ public class BuOrder implements IBuOrder {
            for (OrderDetail od : order.getOrdersDetail()) {
                if (od.getProductOrdered().getIdProduct() == product.getIdProduct()) {
                    od.setQuantite(od.getQuantite() + 1);
-                   itemFoundCart = true;
+                   itemFoundInCart = true;
                }
            }
            
-           if (!itemFoundCart) {
+           if (itemFoundInCart == false) {
                insertNewOrderDetail(order, product);
            }
        }
