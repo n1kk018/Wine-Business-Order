@@ -47,7 +47,7 @@ public class BuOrder implements IBuOrder {
            insertNewOrderDetail(order, product);
        } else {
            for (OrderDetail od : order.getOrdersDetail()) {
-               if (od.getProductOrdered().getIdProduct() == product.getIdProduct()) {
+               if (od.getProductOrdered().getId() == product.getId()) {
                    od.setQuantite(od.getQuantite() + 1);
                    itemFoundInCart = true;
                }
